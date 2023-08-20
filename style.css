@@ -1,0 +1,19 @@
+table {
+    margin: 10vh auto;
+}
+
+th, tr {
+    text-align: left;
+    font-size: large;
+}
+
+th {
+    width: 20vw;
+    height: 5vh;
+}
+
+#heading {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 26px;
+}

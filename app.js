@@ -7,22 +7,61 @@ document.getElementById("no1").innerHTML = no1;
 document.getElementById("no2").innerHTML = no2;
 document.getElementById("op").innerHTML = op;
 
-if (op === "+") {
-    res = no1 + no2;
-    document.getElementById("res").innerHTML = res;    
-} else if (op === "-") {
-    res = no1 - no2;
-    document.getElementById("res").innerHTML = res;
-} else if (op === "*") {
-    res = no1 * no2;
-    document.getElementById("res").innerHTML = res;
-} else if (op === "/") {
-    res = no1 / no2;
-    document.getElementById("res").innerHTML = res;
-} else if (op === "%") {
-    res = no1 % no2;
-    document.getElementById("res").innerHTML = res;
-} else {
-    res = "Invalid Syntax";
-    document.getElementById("res").innerHTML = res;
+
+// if else condition
+
+
+// if (op === "+") {
+//     res = no1 + no2;
+//     document.getElementById("res").innerHTML = res;    
+// } else if (op === "-") {
+//     res = no1 - no2;
+//     document.getElementById("res").innerHTML = res;
+// } else if (op === "*") {
+//     res = no1 * no2;
+//     document.getElementById("res").innerHTML = res;
+// } else if (op === "/") {
+//     res = no1 / no2;
+//     document.getElementById("res").innerHTML = res;
+// } else if (op === "%") {
+//     res = no1 % no2;
+//     document.getElementById("res").innerHTML = res;
+// } else {
+//     res = "Invalid Syntax";
+//     document.getElementById("res").innerHTML = res;
+// }
+
+
+// switch case
+
+switch (op) {
+    case "+":
+        res = no1 + no2;
+        document.getElementById("res").innerHTML = res;
+        break;
+    case "-":
+        res = no1 - no2;
+        document.getElementById("res").innerHTML = res;
+        break;
+    case "*":
+        res = no1 * no2;
+        document.getElementById("res").innerHTML = res;
+        break;
+    case "/":
+        res = no1 / no2;
+        document.getElementById("res").innerHTML = res;
+        break;
+    case "%":
+        res = no1 % no2;
+        document.getElementById("res").innerHTML = res;
+        break;
+    case "**":
+        res = no1 ** no2;
+        document.getElementById("res").innerHTML = res;
+        break;
+
+    default:
+        res = "Invalid Syntax";
+        document.getElementById("res").innerHTML = res;
+        break;
 }
