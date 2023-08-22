@@ -1,67 +1,37 @@
-var no1 = +prompt("Enter 1st number: ");
-var op = prompt("Enter operator: ");
-var no2 = +prompt("Enter 2nd number: ");
-var res;
+function press(n) {
+    document.getElementById("output").value += n;
+}
 
-document.getElementById("no1").innerHTML = no1;
-document.getElementById("no2").innerHTML = no2;
-document.getElementById("op").innerHTML = op;
+function result() {
+    var r = document.getElementById("output");
+    r.value = eval(r.value);
+}
 
+function clr() {
+    document.getElementById("output").value = '';
+}
 
-// if else condition
+function del() {
+    var del = document.getElementById("output").value;
+    del = del.slice(0, -1);
+    document.getElementById("output").value = del;
+}
 
-
-// if (op === "+") {
-//     res = no1 + no2;
-//     document.getElementById("res").innerHTML = res;    
-// } else if (op === "-") {
-//     res = no1 - no2;
-//     document.getElementById("res").innerHTML = res;
-// } else if (op === "*") {
-//     res = no1 * no2;
-//     document.getElementById("res").innerHTML = res;
-// } else if (op === "/") {
-//     res = no1 / no2;
-//     document.getElementById("res").innerHTML = res;
-// } else if (op === "%") {
-//     res = no1 % no2;
-//     document.getElementById("res").innerHTML = res;
-// } else {
-//     res = "Invalid Syntax";
-//     document.getElementById("res").innerHTML = res;
-// }
-
-
-// switch case
-
-switch (op) {
-    case "+":
-        res = no1 + no2;
-        document.getElementById("res").innerHTML = res;
-        break;
-    case "-":
-        res = no1 - no2;
-        document.getElementById("res").innerHTML = res;
-        break;
-    case "*":
-        res = no1 * no2;
-        document.getElementById("res").innerHTML = res;
-        break;
-    case "/":
-        res = no1 / no2;
-        document.getElementById("res").innerHTML = res;
-        break;
-    case "%":
-        res = no1 % no2;
-        document.getElementById("res").innerHTML = res;
-        break;
-    case "**":
-        res = no1 ** no2;
-        document.getElementById("res").innerHTML = res;
-        break;
-
-    default:
-        res = "Invalid Syntax";
-        document.getElementById("res").innerHTML = res;
-        break;
+function modulus() {
+    var r = document.getElementById("output");
+    var currentValue = r.value;
+    var parts = currentValue.split('%');
+    
+    if (parts.length === 2) {
+        var dividend = parseFloat(parts[0]);
+        var divisor = parseFloat(parts[1]);
+        
+        if (!isNaN(dividend) && !isNaN(divisor) && divisor !== 0) {
+            r.value = dividend % divisor;
+        } else {
+            r.value = 'Error';
+        }
+    } else {
+        r.value = 'Error';
+    }
 }
